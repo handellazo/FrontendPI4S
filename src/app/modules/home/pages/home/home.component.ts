@@ -9,7 +9,7 @@ import { SidebarService } from 'src/app/shared/services/sidebar.service';
 })
 export class HomeComponent implements OnInit{
   status:boolean = true;
-  nombre:string = 'Josue'
+  nombre:string = '.'
   _SidebarService = inject(SidebarService)
 
 
