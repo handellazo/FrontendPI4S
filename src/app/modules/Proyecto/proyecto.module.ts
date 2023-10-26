@@ -1,30 +1,35 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { ProyectoRoutingModule } from './proyecto-routing.module';
 import { ProyectoComponent } from './pages/proyecto/proyecto.component';
-import { ProyectoRoutingModule } from '../Proyecto/proyecto-routing.module';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormProyectoComponent } from './pages/components/form-proyecto/form-proyecto.component';
+import { OptionsComponent } from './pages/components/options/options.component';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSortModule } from '@angular/material/sort';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
     ProyectoComponent,
- 
+    FormProyectoComponent,
+    OptionsComponent,
+    
   ],
   imports: [
     CommonModule,
-    ProyectoRoutingModule,
-    MatPaginatorModule,
+    ProyectoRoutingModule, 
+    MatTabsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSortModule,
-    // MatTableDataSource,
-    MatTableModule
-    
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatIconModule,
+    MatButtonModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -8,12 +8,14 @@ const routes: Routes = [
   },
   {
     path:'convenio',
-    loadChildren: () => import('../Convenio/convenio.module').then(m => m.ConvenioModule)
+    loadChildren: () => import('../convenios/convenios.module').then(m => m.ConveniosModule)
   },
   {
     path:'proyecto',
     loadChildren: () => import('../Proyecto/proyecto.module').then(m => m.ProyectoModule)
   },
+  
+  
   {
     path:'difusion',
     loadChildren: () => import('../Difusion/difusion.module').then(m => m.DifusionModule)
@@ -22,10 +24,10 @@ const routes: Routes = [
     path:'actividad',
     loadChildren: () => import('../Actividades/actividades.module').then(m => m.ActividadesModule)
   },
-  // {
-  //   path:'*',
-  //   loadChildren: () => import('').then(m => m.DifusionModule)
-  // },
+  {
+    path:'informe',
+    loadChildren: () => import('../Informe/informe.module').then(m => m.InformeModule)
+  },
 
  {
     path:'**',

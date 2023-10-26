@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 import { Persona } from 'src/app/core/models/persona';
 @Component({
-  selector: 'app-form-convenio',
-  templateUrl: './form-convenio.component.html',
-  styleUrls: ['./form-convenio.component.css']
+  selector: 'app-form-proyecto',
+  templateUrl: './form-proyecto.component.html',
+  styleUrls: ['./form-proyecto.component.css']
 })
-export class FormConvenioComponent implements OnInit {
+export class FormProyectoComponent implements OnInit {
   usuario!: Persona;
   formGroup: FormGroup = new FormGroup({});
   matcher = new MyErrorStateMatcher();
@@ -102,3 +102,5 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
 }
+
+

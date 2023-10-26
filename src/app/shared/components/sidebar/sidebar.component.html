@@ -1,63 +1,43 @@
 <nav class="menu__side">
   <div class="name__page">
-    <i class="fab fa-youtube" [routerLink]="['/home/welcome']"></i>
-    <h4>SPPU</h4>
+    <i class="fas fa-home" [routerLink]="['/home/welcome']"></i>
+    <h4>UPEU</h4>
   </div>
+  
   <ul class="options__menu">
     <li>
       <a class="option" [routerLink]="['/home/convenio']" >
         <i class="far fa-file" title="Portafolio"></i>
-        <h4>proyecto</h4>
+        <h4>Convenio</h4>
       </a>
     </li>
     <li class="selected">
       <a class="option" [routerLink]="['/home/proyecto']">
-        <i class="fas fa-home" title="Inicio"></i>
-        <h4>CONVENIO</h4>
+        <i class="far fa-file" title="Inicio"></i>
+        <h4>proyecto</h4>
       </a>
     </li>
+    
     <li class="selected">
       <a class="option" [routerLink]="['/home/actividad']">
-        <i class="fas fa-home" title="Inicio"></i>
+        <i class="fas fa-users" title="Inicio"></i>
         <h4>actividad</h4>
       </a>
     </li>
-    
-
-    <li>
-      <a class="option" [routerLink]="['/home/difusion']" >
-        <i class="far fa-file" title="Portafolio"></i>
+    <li class="selected">
+      <a class="option" [routerLink]="['/home/informe']">
+        <i class="far fa-file" title="Inicio"></i>
+        <h4>Informe</h4>
+      </a>
+    </li>
+    <li class="selected">
+      <a class="option" [routerLink]="['/home/difusion']">
+        <i class="far fa-file" title="Inicio"></i>
         <h4>Difusion</h4>
       </a>
     </li>
+   
     
-
-    <li>
-      <a class="option" href="#">
-        <i class="fas fa-video" title="Cursos"></i>
-        <h4>Cursos</h4>
-      </a>
-    </li>
-
-    <li>
-      <a class="option" href="#">
-        <i class="far fa-sticky-note" title="Blog"></i>
-        <h4>Blog</h4>
-      </a>
-    </li>
-
-    <li>
-      <a class="option" href="#">
-        <i class="far fa-id-badge" title="Contacto"></i>
-        <h4>Contacto</h4>
-      </a>
-    </li>
-
-    <li href="#">
-      <a class="option" href="#">
-        <i class="far fa-address-card" title="Nosotros"></i>
-        <h4>Nosotros</h4>
-      </a>
-    </li>
+    
   </ul>
 </nav>
