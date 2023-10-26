@@ -8,16 +8,18 @@ const routes: Routes = [
   },
   {
     path:'convenio',
+    loadChildren: () => import('../convenio/convenio.module').then(m => m.ConvenioModule)
+  },
+  {
+    path:'difusion',
     loadChildren: () => import('../Difusion/difusion.module').then(m => m.DifusionModule)
   },
-  {
-    path:'proyecto',
-    loadChildren: () => import('../Proyecto/proyecto.module').then(m => m.ProyectoModule)
-  },
-  {
+
+ {
     path:'**',
     redirectTo:'welcome'
   }
+  
 
 ];
 
