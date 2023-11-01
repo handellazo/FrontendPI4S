@@ -1,0 +1,11 @@
+.Bienvenidos {
+  background-image: url('C:\Users\Pamela Vallejos\FrontendPI4S\Fondo-PI.jpeg');
+  background-size: contain; /* Cambiado a "contain" para hacer que la imagen se ajuste sin recortar */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Cambiado a 60vh para reducir la altura */
+  opacity: 0.1; /* Ajusta la opacidad para hacer el fondo transparente */
+}
