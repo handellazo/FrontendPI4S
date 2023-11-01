@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+    <title>Menú</title>
+</head>
+
+<body>
+    <div id="home">
+        <div class="contenido_opciones">
+            <div class="margen">
+                <a class="opcion" [routerLink]="['/home/convenio']">
+                    <img src="../../../../../assets/mg/convenios.png" class="convenio">
+                    <p class="texto">CONVENIOS</p>
+                </a>
+            </div>
+            <div class="margen">
+                <a class="opcion" [routerLink]="['/home/proyecto']">
+                    <img src="../../../../../assets/mg/proyecto.png" class="proyecto">
+                    <p class="texto">PROYECTOS</p>
+                </a>
+            </div>
+                <div class="margen">
+                    <a class="opcion" [routerLink]="['/home/informe']">
+                        <img src="../../../../../assets/mg/reporte.png" class="informe">
+                        <p class="texto">INFORMES</p>
+                    </a>
+                </div>
+            <div class="margen">
+                <a class="opcion" [routerLink]="['/home/difusion']">
+                    <img src="../../../../../assets/mg/difusion.png" class="gestion_actividad">
+                    <p class="texto">DIFUSION</p>
+                </a>
+            </div>
+            <div class="margen">
+                <a class="opcion" [routerLink]="['/home/actividad']">
+                    <img src="../../../../../assets/mg/gestion-de-proyectos.png" class="grupo">
+                    <p class="texto">ACTIVIDADES</p>
+                </a>
+            </div>
+            <div class="margen">
+                <a class="opcion" [routerLink]="['/home/horas']">
+                    <img src="../../../../../assets/mg/control.png" class="gestion_evidencia">
+                    <p class="texto">CONTROL</p>
+                </a>
+            </div>
+            
+        </div>
+        <div class="identi">
+            <!-- <img src="/assets/pictures/upeu.png" class="logo"> -->
+            <br>
+            <img src="../../../../../assets/mg/usuario.png" class="icono">
+            <p class="nm"><b>ADMINISTRADOR</b></p>
+            <p class="nm">UPeu - Universidad Sede</p>
+             <div class="REGRESAR">
+                <p class="sesion"><a [routerLink]="['/login']" class="sesion">CERRAR SESION </a> </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
