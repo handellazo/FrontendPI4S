@@ -1,0 +1,23 @@
+<h2>lista empleado</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>NOMBRE</th>
+        <th>FECHA INICIO</th>
+        <th>FECHA FIN</th>
+        <th>ANEXO</th>
+    </tr>
+
+
+</thead>
+<tbody>
+    <tr *ngFor="let Convenios of convenio">
+     <td>{{Convenios.nombre}}</td>
+     <td>{{Convenios.fecha_inicio}}</td>
+     <td>{{Convenios.fecha_fin}}</td>
+     <td>{{Convenios.anexo}}</td>
+
+    </tr>
+
+</tbody>
+</table>
