@@ -1,0 +1,179 @@
+<div>
+  <div class="header"> NUEVO PROYECTO
+  </div>
+
+<form class="example-form" [formGroup]="formGroup" (ngSubmit)="send()">
+
+  <!-- Nombre de proyecto -->
+  <mat-form-field class="example-full-width wide-input">
+      <mat-label>Nombre</mat-label>
+      <input type="text" matInput formControlName="nombre" placeholder="Nombre del proyecto">
+      <mat-error *ngIf="formGroup.get('nombre')?.hasError('required')">
+          El nombre es <strong>requerido</strong>
+      </mat-error>
+  </mat-form-field>
+
+  
+  <!-- Tipo de proyecto -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Tipo</mat-label>
+      <input type="text" matInput formControlName="tipo" [matAutocomplete]="autoTipo">
+      <mat-autocomplete #autoTipo="matAutocomplete" [displayWith]="displayFn2">
+          <mat-option *ngFor="let option of filteredOptionsTipo | async" [value]="option">
+              {{option.tipo}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Departamento -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Departamento</mat-label>
+      <input type="text" matInput formControlName="departamento" [matAutocomplete]="autoDepartamento">
+      <mat-autocomplete #autoDepartamento="matAutocomplete" [displayWith]="displayFn3">
+          <mat-option *ngFor="let option of filteredOptionsDepartamento | async" [value]="option">
+              {{option.departamento}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Provincia -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Provincia</mat-label>
+      <input type="text" matInput formControlName="provincia" [matAutocomplete]="autoProvincia">
+      <mat-autocomplete #autoProvincia="matAutocomplete" [displayWith]="displayFn4">
+          <mat-option *ngFor="let option of filteredOptionsProvincia | async" [value]="option">
+              {{option.provincia}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Distrito -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Distrito</mat-label>
+      <input type="text" matInput formControlName="distrito" [matAutocomplete]="autoDistrito">
+      <mat-autocomplete #autoDistrito="matAutocomplete" [displayWith]="displayFn5">
+          <mat-option *ngFor="let option of filteredOptionsDistrito | async" [value]="option">
+              {{option.distrito}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Anexo -->
+  <mat-form-field class="example-full-width wide-input">
+      <mat-label>Referencia</mat-label>
+      <input type="text" matInput formControlName="referencia" placeholder="referencia">
+      <mat-error *ngIf="formGroup.get('referencia')?.hasError('required')">
+          La referencia es <strong>requerido</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <!-- Presupuesto -->
+  <mat-form-field class="example-full-width wide-input">
+      <mat-label>Presupuesto</mat-label>
+      <input type="text" matInput formControlName="presupuesto" placeholder="Presupuesto">
+      <mat-error *ngIf="formGroup.get('presupuesto')?.hasError('required')">
+          El presupuesto es <strong>requerido</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <!-- Facultad -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Facultad</mat-label>
+      <input type="text" matInput formControlName="facultad" [matAutocomplete]="autoFacultad">
+      <mat-autocomplete #autoFacultad="matAutocomplete" [displayWith]="displayFn6">
+          <mat-option *ngFor="let option of filteredOptionsFacultad | async" [value]="option">
+              {{option.facultad}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- EP -->
+  <mat-form-field class="example-full-width">
+      <mat-label>EP</mat-label>
+      <input type="text" matInput formControlName="ep" [matAutocomplete]="autoEp">
+      <mat-autocomplete #autoEp="matAutocomplete" [displayWith]="displayFn7">
+          <mat-option *ngFor="let option of filteredOptionsEp | async" [value]="option">
+              {{option.ep}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Semestre -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Semestre</mat-label>
+      <input type="text" matInput formControlName="semestre" [matAutocomplete]="autoSemestre">
+      <mat-autocomplete #autoSemestre="matAutocomplete" [displayWith]="displayFn8">
+          <mat-option *ngFor="let option of filteredOptionsSemestre | async" [value]="option">
+              {{option.semestre}}
+          </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+
+  <!-- Ciclo -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Ciclo</mat-label>
+      <input type="text" matInput formControlName="ciclo" [matAutocomplete]="autoCiclo">
+      <mat-autocomplete #autoCiclo="matAutocomplete" [displayWith]="displayFn9">
+          <mat-option *ngFor="let option of filteredOptionsCiclo | async" [value]="option">
+              {{option.ciclo}}
+          </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+
+  <!-- FECHA INICIAL -->
+  <mat-form-field color="accent">
+      <mat-label>Fecha Inicial</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="fechaInicial">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <!-- FECHA FINAL -->
+  <mat-form-field color="accent">
+      <mat-label>Fecha Final</mat-label>
+      <input matInput [matDatepicker]="picker2" formControlName="fechaFinal">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2 color="primary"></mat-datepicker>
+  </mat-form-field>
+
+  <!-- REPRESENTANTE -->
+  <mat-form-field class="example-full-width wide-input">
+      <mat-label>Representante</mat-label>
+      <input type="text" matInput formControlName="representante" placeholder="Nombre del representante">
+      <mat-error *ngIf="formGroup.get('representante')?.hasError('required')">
+          El nombre del representante es <strong>requerido</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <!-- CONVENIOS ACTIVOS -->
+  <mat-form-field class="example-full-width">
+      <mat-label>Convenios Activos</mat-label>
+      <input type="text" matInput formControlName="convenio" [matAutocomplete]="autoConvenio">
+      <mat-autocomplete #autoConvenio="matAutocomplete" [displayWith]="displayFn10">
+          <mat-option *ngFor="let option of filteredOptionsConvenio | async" [value]="option">
+              {{option.convenio}}
+          </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+
+
+  <!-- Boton de agregar cursos -->
+  <button mat-raised-button color="primary" (click)="openPopup()">
+      <mat-icon>+</mat-icon>
+  </button>
+
+  <!-- Botones de CANCELAR Y GUARDAR -->
+  <div class="row">
+      <button mat-raised-button color="warn" type="button">cancelar</button>
+      <button mat-raised-button class="btn--agregar" type="submit">Guardar</button>
+  </div>
+</form>
+
+
