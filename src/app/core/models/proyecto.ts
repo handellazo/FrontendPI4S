@@ -8,7 +8,7 @@ export class Proyecto {
     fechafin!: Date; 
     representante: string = '';
   
-    tipo: string = '';
+    tipoPy: string = '';
     departamento: string = '';
     provincia: string = '';
     distrito: string = '';

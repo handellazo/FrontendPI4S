@@ -19,8 +19,8 @@
         <mat-label>Tipo</mat-label>
         <input type="text" matInput formControlName="tipo" [matAutocomplete]="autoTipo">
         <mat-autocomplete #autoTipo="matAutocomplete" [displayWith]="displayFn2">
-            <mat-option *ngFor="let option of filteredOptionsTipo | async" [value]="option">
-                {{option.tipo}}
+            <mat-option *ngFor="let tipoproyecto of tipoproyectolist" [value]="tipoproyecto">
+                {{tipoproyecto.tipoPy}}
             </mat-option>
         </mat-autocomplete>
         <mat-icon matSuffix></mat-icon>
@@ -85,8 +85,8 @@
         <mat-label>Facultad</mat-label>
         <input type="text" matInput formControlName="facultad" [matAutocomplete]="autoFacultad">
         <mat-autocomplete #autoFacultad="matAutocomplete" [displayWith]="displayFn6">
-            <mat-option *ngFor="let option of filteredOptionsFacultad | async" [value]="option">
-                {{option.facultad}}
+            <mat-option *ngFor="let facultad of facultadlist" [value]="facultad">
+                {{facultad.facultad}}
             </mat-option>
         </mat-autocomplete>
         <mat-icon matSuffix></mat-icon>
@@ -97,8 +97,8 @@
         <mat-label>EP</mat-label>
         <input type="text" matInput formControlName="ep" [matAutocomplete]="autoEp">
         <mat-autocomplete #autoEp="matAutocomplete" [displayWith]="displayFn7">
-            <mat-option *ngFor="let option of filteredOptionsEp | async" [value]="option">
-                {{option.ep}}
+            <mat-option *ngFor="let ep of eplist" [value]="ep">
+                {{ep.ep}}
             </mat-option>
         </mat-autocomplete>
         <mat-icon matSuffix></mat-icon>
@@ -109,8 +109,8 @@
         <mat-label>Semestre</mat-label>
         <input type="text" matInput formControlName="semestre" [matAutocomplete]="autoSemestre">
         <mat-autocomplete #autoSemestre="matAutocomplete" [displayWith]="displayFn8">
-            <mat-option *ngFor="let option of filteredOptionsSemestre | async" [value]="option">
-                {{option.semestre}}
+            <mat-option *ngFor="let semestre of semestrelist" [value]="semestre">
+                {{semestre.semestre}}
             </mat-option>
         </mat-autocomplete>
         <mat-icon matSuffix></mat-icon>
