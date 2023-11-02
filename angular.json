@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PIfrontend": {
+    "app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pifrontend",
+            "outputPath": "dist/app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PIfrontend:build:production"
+              "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "PIfrontend:build:development"
+              "browserTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PIfrontend:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -90,9 +90,8 @@
               "src/assets"
             ],
             "styles": [
-              
-              "src/styles.css",
-              "node_modules/font-awesome/css/font-awesome.min.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -101,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": "a2bb77a4-0764-4a31-adc1-09148475f366"
+    "analytics": false
   }
 }

@@ -6,21 +6,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './modules/auth/auth.module';
-import { HttpClientModule } from '@angular/common/http';
-import { MatInputModule } from '@angular/material/input';
-
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatInputModule
-    
+    BrowserAnimationsModule
   ],
  
   bootstrap: [AppComponent],

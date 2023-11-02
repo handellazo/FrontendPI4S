@@ -4,7 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { RouterModule } from '@angular/router';
-
+import{MatTableModule} from '@angular/material/table'
 
 
 @NgModule({
@@ -15,11 +15,13 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
   ],
   exports:[
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    MatTableModule
   ]
 })
 export class SharedModule { }

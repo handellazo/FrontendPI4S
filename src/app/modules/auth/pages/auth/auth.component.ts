@@ -34,7 +34,7 @@ export class AuthComponent implements OnInit{
   public sendUser(){
     const {value} = this.formLogin
     if (value.user==='alum'&& value.password === '1234' ) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/menu']);
     }
 
   }
